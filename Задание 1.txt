@@ -1,0 +1,57 @@
+framin@Ubuntu:~$ mkdir toys_for_school
+
+framin@Ubuntu:~$ mkdir toys_for_kindergarden
+
+framin@Ubuntu:~$ cd toys_for_school/
+
+framin@Ubuntu:~/toys_for_school$ touch robots
+
+framin@Ubuntu:~/toys_for_school$ touch constructor
+
+framin@Ubuntu:~/toys_for_school$ touch table_games
+
+framin@Ubuntu:~/toys_for_school$ cd..
+
+framin@Ubuntu:~$ cd toys_for_kindergarden/
+
+framin@Ubuntu:~/toys_for_kindergarden$ touch pupets
+
+framin@Ubuntu:~/toys_for_kindergarden$ touch dolls
+
+framin@Ubuntu:~/toys_for_kindergarden$ touch cars
+
+framin@Ubuntu:~$ cp -ri toys_for_school/* toys_for_kindergarden/
+
+framin@Ubuntu:~$ rm -R toys_for_school/
+
+framin@Ubuntu:~$ mv toys_for_kindergarden toys_names
+
+framin@Ubuntu:~$ mv toys_names toys
+
+framin@Ubuntu:~$ cd toys
+
+framin@Ubuntu:~/toys$ ls
+
+cars  constructor  dolls  pupets  robots  table_games
+
+
+
+
+Установка и удаление snap пакета:
+framin@Ubuntu:~$ sudo snap install gimp
+
+[sudo] пароль для framin: 
+
+gimp 2.10.30 от Snapcrafters установлен
+
+framin@Ubuntu:~$ snap remove gimp
+
+gimp удалён
+
+
+
+
+Добавить задачу для выполнения каждые 3 минуты (создание директории, запись в файл):
+ crontab -e
+ */3 * * * * echo "Hello" >> /home/framin/greetings
+ каждые 3 минуты в файл greetings будет записываться новая строчка "Hello"
